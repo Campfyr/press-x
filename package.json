@@ -6,6 +6,7 @@
     "url": "git+https://github.com/Campfyr/press-x.git"
   },
   "scripts": {
+    "dev:press-x": "npm run dev -w @campfyr/press-x",
     "build:press-x": "npm run build -w @campfyr/press-x"
   },
   "workspaces": [
