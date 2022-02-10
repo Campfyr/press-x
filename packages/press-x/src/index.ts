@@ -1,1 +1,2 @@
-export {test} from './press-x';
+import PressX from './press-x'
+export default PressX;

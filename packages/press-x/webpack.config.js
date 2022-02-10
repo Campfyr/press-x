@@ -16,8 +16,9 @@ module.exports = (env) => {
             clean: true,
             globalObject: 'this',
             library: {
-                name: "press-x",
-                type: "umd"
+                name: "pressX",
+                type: "umd",
+                export: "default"
             }
         },
         module: {
