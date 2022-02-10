@@ -1,1 +1,1 @@
-export {test as default} from './press-x';
+export {test} from './press-x';

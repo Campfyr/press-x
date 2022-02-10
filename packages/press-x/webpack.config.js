@@ -8,11 +8,13 @@ module.exports = (env) => {
         mode: envMode,
         watch: !isProduction,
         devtool: isProduction ? 'eval-source-map' : 'source-map',
+        stats: isProduction ? 'normal' : 'errors-only',
         entry: './src/index.ts',
         output: {
             filename: 'press-x.js',
             path: path.resolve(__dirname, 'dist'),
             clean: true,
+            globalObject: 'this',
             library: {
                 name: "press-x",
                 type: "umd"
@@ -34,6 +36,9 @@ module.exports = (env) => {
                     }
                 }
             ],
+        },
+        optimization: {
+            usedExports: true,
         },
         resolve: {
             extensions: ['.ts'],

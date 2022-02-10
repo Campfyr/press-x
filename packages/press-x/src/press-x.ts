@@ -1,3 +1,3 @@
 export const test = (str: string) => {
-    return (str.toLocaleLowerCase())
+    return (str.toLocaleLowerCase() + "BRUH")
 }

@@ -7,7 +7,7 @@
 		exports["press-x"] = factory();
 	else
 		root["press-x"] = factory();
-})(self, function() {
+})(this, function() {
 return /******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
@@ -18,12 +18,11 @@ return /******/ (() => { // webpackBootstrap
   \************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-__webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "test": () => (/* binding */ test)
 /* harmony export */ });
 var test = function test(str) {
-  return str.toLocaleLowerCase();
+  return str.toLocaleLowerCase() + "BRUH";
 };
 
 /***/ })
@@ -92,7 +91,7 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* reexport safe */ _press_x__WEBPACK_IMPORTED_MODULE_0__.test)
+/* harmony export */   "test": () => (/* reexport safe */ _press_x__WEBPACK_IMPORTED_MODULE_0__.test)
 /* harmony export */ });
 /* harmony import */ var _press_x__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./press-x */ "./src/press-x.ts");
 

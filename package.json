@@ -6,8 +6,10 @@
     "url": "git+https://github.com/Campfyr/press-x.git"
   },
   "scripts": {
-    "dev:press-x": "npm run dev -w @campfyr/press-x",
-    "build:press-x": "npm run build -w @campfyr/press-x"
+    "build-dev:press-x": "npm run build-dev -w @campfyr/press-x",
+    "build:press-x": "npm run build -w @campfyr/press-x",
+    "dev-script:main": "npm run dev:main -w @campfyr/press-x-dev-scripts",
+    "dev:main": "concurrently --raw --kill-others \"npm run build-dev:press-x\" \"npm run dev-script:main\""
   },
   "workspaces": [
     "packages/*",
@@ -18,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/Campfyr/press-x/issues"
   },
-  "homepage": "https://github.com/Campfyr/press-x#readme"
+  "homepage": "https://github.com/Campfyr/press-x#readme",
+  "devDependencies": {
+    "concurrently": "^7.0.0"
+  }
 }

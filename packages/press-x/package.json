@@ -7,7 +7,7 @@
     "url": "https://github.com/Campfyr/press-x/issues"
   },
   "scripts": {
-    "dev": "webpack -c webpack.config.js --env development",
+    "build-dev": "webpack -c webpack.config.js --env development",
     "build": "webpack -c webpack.config.js --env production"
   },
   "devDependencies": {
