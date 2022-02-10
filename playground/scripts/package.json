@@ -1,0 +1,19 @@
+{
+  "name": "@campfyr/press-x-dev-scripts",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Campfyr/press-x.git"
+  },
+  "scripts": {
+    "dev:main": "nodemon --config ./nodemon.json main.js -q"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "chalk": "^5.0.0"
+  }
+}

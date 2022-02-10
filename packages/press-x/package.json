@@ -7,7 +7,8 @@
     "url": "https://github.com/Campfyr/press-x/issues"
   },
   "scripts": {
-    "build": "webpack --config webpack.config.js",
+    "build-dev": "webpack -c webpack.config.js --env development",
+    "build": "webpack -c webpack.config.js --env production",
     "lint": "eslint \"./src/**/*.ts\"",
     "lint:fix": "eslint --fix \"./src/**/*.ts\""
   },
@@ -19,5 +20,9 @@
     "typescript": "^4.5.5",
     "webpack": "^5.68.0",
     "webpack-cli": "^4.9.2"
+  },
+  "homepage": "https://github.com/Campfyr/press-x/tree/main/packages/press-x#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
   }
 }
