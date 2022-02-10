@@ -4,9 +4,9 @@
 	else if(typeof define === 'function' && define.amd)
 		define([], factory);
 	else if(typeof exports === 'object')
-		exports["press-x"] = factory();
+		exports["pressX"] = factory();
 	else
-		root["press-x"] = factory();
+		root["pressX"] = factory();
 })(this, function() {
 return /******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
@@ -19,11 +19,19 @@ return /******/ (() => { // webpackBootstrap
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "test": () => (/* binding */ test)
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-var test = function test(str) {
-  return str.toLocaleLowerCase() + "BRUH";
-};
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var PressX = /*#__PURE__*/_createClass(function PressX() {
+  _classCallCheck(this, PressX);
+});
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (PressX);
 
 /***/ })
 
@@ -71,17 +79,6 @@ var test = function test(str) {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
 /******/ 	})();
 /******/ 	
-/******/ 	/* webpack/runtime/make namespace object */
-/******/ 	(() => {
-/******/ 		// define __esModule on exports
-/******/ 		__webpack_require__.r = (exports) => {
-/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 			}
-/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 		};
-/******/ 	})();
-/******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
@@ -89,14 +86,15 @@ var __webpack_exports__ = {};
 /*!**********************!*\
   !*** ./src/index.ts ***!
   \**********************/
-__webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "test": () => (/* reexport safe */ _press_x__WEBPACK_IMPORTED_MODULE_0__.test)
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _press_x__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./press-x */ "./src/press-x.ts");
 
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_press_x__WEBPACK_IMPORTED_MODULE_0__["default"]);
 })();
 
+__webpack_exports__ = __webpack_exports__["default"];
 /******/ 	return __webpack_exports__;
 /******/ })()
 ;

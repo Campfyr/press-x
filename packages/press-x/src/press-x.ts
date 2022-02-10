@@ -1,3 +1,7 @@
-export const test = (str: string) => {
-    return str.toLocaleLowerCase() + 'BRUH';
-};
+class PressX {
+    constructor() {
+
+    }
+}
+
+export default PressX;
