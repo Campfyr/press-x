@@ -6,12 +6,31 @@
     "url": "git+https://github.com/Campfyr/press-x.git"
   },
   "scripts": {
-    "build:press-x": "npm run build -w @campfyr/press-x"
+    "pre-commit": "lint-staged",
+    "build:press-x": "npm run build -w @campfyr/press-x",
+    "postinstall": "husky install"
   },
   "workspaces": [
     "packages/*",
     "playground/*"
   ],
+  "lint-staged": {
+    "packages/**/src/**/*.ts": [
+      "eslint --fix"
+    ]
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^16.1.0",
+    "@commitlint/config-conventional": "^16.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.11.0",
+    "@typescript-eslint/parser": "^5.11.0",
+    "eslint": "^8.8.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.3",
+    "prettier": "^2.5.1"
+  },
   "author": "Campfyr",
   "license": "MIT",
   "bugs": {

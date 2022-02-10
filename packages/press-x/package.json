@@ -7,7 +7,9 @@
     "url": "https://github.com/Campfyr/press-x/issues"
   },
   "scripts": {
-    "build": "webpack --config webpack.config.js"
+    "build": "webpack --config webpack.config.js",
+    "lint": "eslint \"./src/**/*.ts\"",
+    "lint:fix": "eslint --fix \"./src/**/*.ts\""
   },
   "devDependencies": {
     "@babel/core": "^7.17.2",
