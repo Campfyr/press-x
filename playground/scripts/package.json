@@ -11,7 +11,8 @@
     "dev:main": "nodemon --config ./nodemon.json main.js -q"
   },
   "devDependencies": {
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "source-map-support": "^0.5.21"
   },
   "dependencies": {
     "chalk": "^5.0.0"
