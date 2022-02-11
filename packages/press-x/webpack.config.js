@@ -1,4 +1,5 @@
 const path = require('path');
+const TypescriptDeclarationPlugin = require('typescript-declaration-webpack-plugin');
 
 module.exports = (env) => {
     const {production: isProduction} = env;
@@ -7,9 +8,12 @@ module.exports = (env) => {
     return {
         mode: envMode,
         watch: !isProduction,
-        devtool: isProduction ? 'eval-source-map' : 'source-map',
+        devtool: isProduction ? 'eval-source-map' : 'inline-source-map',
         stats: isProduction ? 'normal' : 'errors-only',
         entry: './src/index.ts',
+        plugins: [
+            new TypescriptDeclarationPlugin({out: 'press-x.d.ts'})
+        ],
         output: {
             filename: 'press-x.js',
             path: path.resolve(__dirname, 'dist'),
@@ -24,14 +28,18 @@ module.exports = (env) => {
         module: {
             rules: [
                 {
-                    test: /\.[m?j|t]s$/,
+                    test: /\.tsx?$/,
+                    exclude: /(node_modules)/,
+                    loader: 'ts-loader'
+                },
+                {
+                    test: /\.m?js$/,
                     exclude: /(node_modules)/,
                     use: {
                         loader: 'babel-loader',
                         options: {
                             presets: [
-                                '@babel/preset-env',
-                                '@babel/preset-typescript'
+                                '@babel/preset-env'
                             ]
                         }
                     }
