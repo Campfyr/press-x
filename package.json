@@ -1,6 +1,7 @@
 {
   "name": "@campfyr/press-x-workspace",
   "version": "1.0.0",
+  "private": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Campfyr/press-x.git"
@@ -10,12 +11,13 @@
     "build:press-x": "npm run build -w @campfyr/press-x",
     "build-dev:press-x": "npm run build-dev -w @campfyr/press-x",
     "dev-script:main": "npm run dev:main -w @campfyr/press-x-dev-scripts",
+    "dev:react": "npm run start -w @campfyr/press-x-react",
     "dev:main": "concurrently --raw --kill-others \"npm run build-dev:press-x\" \"npm run dev-script:main\"",
     "postinstall": "husky install"
   },
   "workspaces": [
-    "packages/*",
-    "playground/*"
+    "packages/**/*",
+    "playground/**/*"
   ],
   "lint-staged": {
     "packages/**/src/**/*.ts": [
@@ -28,7 +30,7 @@
     "@typescript-eslint/eslint-plugin": "^5.11.0",
     "@typescript-eslint/parser": "^5.11.0",
     "concurrently": "^7.0.0",
-    "eslint": "^8.8.0",
+    "eslint": "^7.11.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "husky": "^7.0.4",
